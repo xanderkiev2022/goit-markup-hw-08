@@ -1,0 +1,114 @@
+.logo {
+    margin-right: 93px;
+
+    font-family: Raleway, sans-serif;
+    color: #000000;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+
+    &__label {   
+            color: var(--accent-color);
+        }
+}
+
+.nav-menu {
+    display: flex;
+
+    &__link,
+    &__link--active {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+                
+        color: inherit;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__link:hover,
+    &__link:focus, 
+    &__link--active {
+        color: var(--accent-color);
+        }
+
+    /* Нижня полоска декору меню */
+
+    &__link--active {
+    position: relative;
+    }
+
+    &__link--active::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+
+    background-color: var(--accent-color);
+    }
+}
+
+.nav-menu__item+.nav-menu__item {
+    margin-left: 50px;
+}
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;    
+    
+        color: var(--submain-text-color);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--accent-color);
+        }
+
+    &__svg {
+    margin-right: 10px;
+    fill: currentColor;
+    text-align: center;
+    }  
+
+    /* Через Before */
+    
+    /* .email::before {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    background-image: url("../images/SVG/contacts-envelope.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: 1px solid black;
+    } */
+} 
+
+.contacts__item+.contacts__item {
+    margin-left: 50px;
+}
+
