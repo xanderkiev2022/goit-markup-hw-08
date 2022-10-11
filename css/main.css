@@ -95,6 +95,8 @@ img {
 
 .header {
   border-bottom: 1px solid #ECECEC;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .header .container {
   align-items: center;
@@ -109,12 +111,6 @@ img {
   color: #000000;
   font-weight: 700;
   text-decoration: none;
-}
-@media screen and (max-width: 767px) {
-  .logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
 }
 @media screen and (min-width: 768px) {
   .logo {
@@ -599,12 +595,12 @@ img {
 }
 .footer .logo {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   color: var(--white-color);
 }
 .footer__contact {
   display: inline-block;
-  margin-bottom: 9px;
+  margin-top: 8px;
   font-style: normal;
   font-weight: inherit;
   font-size: 14px;
@@ -613,6 +609,11 @@ img {
   color: hsla(0deg, 0%, 100%, 0.6);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .footer__contact {
+    margin-top: 9px;
+  }
 }
 .footer__contact--address {
   color: var(--white-color);
@@ -653,8 +654,7 @@ img {
 
 /* Footer - 3й стовпчик */
 .subscribe {
-  padding-top: 72px;
-  margin-left: 93px;
+  padding-top: 60px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -662,11 +662,23 @@ img {
   text-transform: uppercase;
   color: var(--white-color);
 }
+@media screen and (min-width: 768px) {
+  .subscribe {
+    padding-top: 72px;
+    margin-left: 93px;
+  }
+}
 .subscribe__container {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .subscribe__container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .subscribe__input {
   box-sizing: border-box;
@@ -700,7 +712,7 @@ img {
   display: flex;
   align-items: center;
   background-color: var(--accent-color);
-  min-width: 200px;
+  max-width: 200px;
   height: 50px;
   margin-left: 12px;
   padding: 10px 28px;
@@ -714,6 +726,12 @@ img {
   color: var(--white-color);
   letter-spacing: 0.06em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 767px) {
+  .subscribe__btn {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
   background: #188CE8;
@@ -830,6 +848,61 @@ img {
 
     .portfolio__item:nth-last-child(-n+3) {
     margin-bottom: 0;} */
+.mob-menu {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  height: 796px;
+  padding: 48px 40px;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+.mob-menu a {
+  text-decoration: none;
+}
+.mob-menu__nav-list {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.mob-menu__nav-item {
+  display: flex;
+  margin-bottom: 32px;
+}
+.mob-menu__link {
+  color: var(--main-text-color);
+}
+.mob-menu__link--accent {
+  color: var(--accent-color);
+}
+.mob-menu__bottom {
+  margin-top: auto;
+}
+.mob-menu__contacts-item:first-child {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu__social-list {
+  display: flex;
+}
+
 /* Бекдроп на index */
 .backdrop {
   position: fixed;
