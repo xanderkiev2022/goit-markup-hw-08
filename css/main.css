@@ -21,8 +21,8 @@ body {
 }
 
 .container {
-  max-width: 480px;
   margin: 0 auto;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -64,8 +64,14 @@ address {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 img {
@@ -97,7 +103,6 @@ img {
 }
 
 .logo {
-  padding-left: 15px;
   font-size: 24px;
   line-height: 1.17;
   font-family: Raleway, sans-serif;
@@ -105,7 +110,13 @@ img {
   font-weight: 700;
   text-decoration: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
   .logo {
     padding-right: 93px;
     font-size: 26px;
@@ -224,29 +235,43 @@ img {
 }
 
 .hero {
-  padding-top: 200px;
+  padding: 118px 60px;
   padding-bottom: 200px;
+  max-width: 480px;
+  max-height: 400px;
   background-color: var(--hero-footer-background-color);
   text-align: center;
-  max-width: 1600px;
-  max-height: 600px;
   margin: auto;
   background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    max-height: 600px;
+  }
+}
 .hero__title {
+  font-size: 26px;
+  line-height: 1.62;
   color: var(--white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
-  max-width: 696px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 .hero__btn {
   background-color: var(--accent-color);
@@ -267,8 +292,10 @@ img {
   background: #188CE8;
 }
 
-.advantages {
-  padding-bottom: 0;
+@media screen and (min-width: 768px) {
+  .advantages {
+    padding-bottom: 0;
+  }
 }
 .advantages__title {
   margin-bottom: 10px;
@@ -277,6 +304,11 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .advantages__title {
+    text-align: center;
+  }
 }
 .advantages__description {
   margin-top: 10px;
@@ -287,6 +319,12 @@ img {
 }
 .advantages__list {
   display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .advantages__list {
+    flex-direction: column;
+  }
 }
 .advantages__svg {
   display: flex;
@@ -298,10 +336,20 @@ img {
   border-radius: 4px;
 }
 
-.advantages__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .duty {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
-
 .duty__title {
   padding-bottom: 50px;
   text-align: center;
@@ -354,40 +402,68 @@ img {
   text-align: center;
 }
 .team__title {
-  padding-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.17;
+  padding-bottom: 30px;
   text-align: center;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   color: var(--main-text-color);
+}
+@media screen and (min-width: 768px) {
+  .team__title {
+    font-size: 36px;
+    padding-bottom: 50px;
+  }
 }
 .team__list {
   display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .team__list {
+    flex-direction: column;
+  }
 }
 .team__name {
   font-weight: 500;
 }
 .team__position {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--submain-text-color);
 }
+@media screen and (min-width: 768px) {
+  .team__position {
+    margin-bottom: 20px;
+  }
+}
 .team__item {
   background-color: var(--white-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.team__photo {
+  width: 270px;
+}
+@media screen and (max-width: 767px) {
+  .team__photo {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .team__details {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
-
-.team__item + .team__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .team__details {
+    padding-bottom: 30px;
+  }
 }
 
 .social-media {
@@ -444,12 +520,19 @@ img {
 }
 
 .clients__title {
-  padding-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.17;
+  padding-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 768px) {
+  .clients__title {
+    font-size: 36px;
+    line-height: 1.16;
+    padding-bottom: 50px;
+  }
 }
 .clients__link {
   display: flex;
@@ -463,16 +546,27 @@ img {
 }
 .clients__list {
   display: flex;
+  gap: 30px;
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .clients__list {
+    flex-wrap: wrap;
+  }
 }
 .clients__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: 170px;
+  }
 }
 .clients__link:hover, .clients__link:focus {
   border: 1px solid var(--accent-color);
@@ -481,10 +575,6 @@ img {
 }
 .clients__link:hover .logo__svg, .clients__link:focus .logo__svg {
   fill: var(--accent-color);
-}
-
-.clients__item + .clients__item {
-  margin-left: 30px;
 }
 
 .logo__svg {
@@ -499,6 +589,13 @@ img {
 }
 .footer .container {
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .footer .logo {
   display: inline-block;
@@ -536,14 +633,19 @@ img {
 
 /* Footer - 2й стовпчик */
 .follow {
-  padding-top: 72px;
-  margin-left: 70px;
+  padding-top: 60px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .follow {
+    padding-top: 72px;
+    margin-left: 70px;
+  }
 }
 .follow .social-media {
   margin-top: 20px;

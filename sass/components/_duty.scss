@@ -1,5 +1,9 @@
 .duty {
 
+    @media screen and (max-width:767px) {
+        @include hidden;
+    }
+
     &__title {
     padding-bottom: 50px;
 
