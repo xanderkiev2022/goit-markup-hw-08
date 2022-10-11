@@ -128,3 +128,15 @@
     margin-left: 50px;
 }
 
+
+    /* Моб-меню */
+
+.mob-menu__svg {
+    @media screen and (min-width:768px) {
+            @include hidden;
+        }
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+
+}

@@ -61,6 +61,11 @@
             >
           </li>
         </ul>
+
+        <svg class="mob-menu__svg">
+                <use href="./images/icons.svg#menu"></use>
+              </svg>
+
       </div>
     </header>
 
@@ -537,43 +542,54 @@
 
     <!--<Мобільне меню>-->
     <div class="mob-menu">
-      <ul class="mob-menu__nav-list">
-        <li class="mob-menu__nav-item">
-          <a href="./index.html" class="mob-menu__link">Студія</a>
-        </li>
-        <li class="mob-menu__nav-item">
-          <a href="./portfolio.html" class="mob-menu__link">Портфоліо</a>
-        </li>
-        <li class="mob-menu__nav-item"><a href="" class="mob-menu__link">Контакти</a></li>
-      </ul>
+      
+      <div class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link">Студія</a>
+          </li>
+          <li class="nav__item">
+            <a href="./portfolio.html" class="nav__link">Портфоліо</a>
+          </li>
+          <li class="nav__item"><a href="" class="nav__link">Контакти</a></li>
+        </ul>
+      </div>
 
-      <div class="mob-menu__bottom">
-        <ul class="mob-menu__contacts-list">
-          <li class="mob-menu__contacts-item">
-            <a href="tel:+380961111111" class="mob-menu__link mob-menu__link--accent"
+
+      <div class="communication is-hidden">
+
+        <ul class="communication__list">
+          <li class="communication__item">
+            <a href="tel:+380961111111" class="communication__link accent"
               >+38 096 111 11 11</a
             >
           </li>
-          <li class="mob-menu__contacts-item">
-            <a href="mailto:info@devstudio.com" class="mob-menu__link">info@devstudio.com</a>
+          <li class="communication__item">
+            <a href="mailto:info@devstudio.com" class="communication__link not-accent">info@devstudio.com</a>
           </li>
         </ul>
 
-        <ul class="mob-menu__social-list">
-          <li class="mob-menu__social-item">
-            <a href="./index.html" class="mob-menu__link mob-menu__link--accent">Instagram</a>
+        <ul class="social">
+          <li class="social__item">
+            <a href="" class="social__link accent">Instagram</a>
           </li>
-          <li class="mob-menu__social-item">
-            <a href="./portfolio.html" class="mob-menu__link mob-menu__link--accent">Twitter</a>
+          <li class="social__item">
+            <a href="" class="social__link accent">Twitter</a>
           </li>
-          <li class="mob-menu__social-item">
-            <a href="" class="mob-menu__link mob-menu__link--accent">Facebook</a>
+          <li class="social__item">
+            <a href="" class="social__link accent">Facebook</a>
           </li>
-          <li class="mob-menu__social-item">
-            <a href="" class="mob-menu__link mob-menu__link--accent">LinkedIn</a>
+          <li class="social__item">
+            <a href="" class="social__link accent">LinkedIn</a>
           </li>
         </ul>
       </div>
+
+      <button data-modal-close class="mob-menu__close">
+        <svg class="mob-menu__svg">
+          <use href="./images/icons.svg#close"></use>
+      </svg>
+
     </div>
 
     <script

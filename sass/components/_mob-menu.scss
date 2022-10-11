@@ -7,23 +7,55 @@
         text-decoration: none;
     }
 
-    display: flex;
+    .accent {
+        color: var(--accent-color);
+    }
+        
+    .not-accent {
+        color: var(--submain-text-color);
+    }
+
+    position: relative;
+    display: flex;    
     flex-direction: column;
     width: 480px;
     height: 796px;
     padding: 48px 40px;
+    margin: 0 auto;
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
     
-    &__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        border-radius: 50%;
+        border-color: transparent;
+        background-color: transparent;
+        }
+    
+    &__svg {
+        width: 40px;
+        height: 40px;
+    
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+            }
+    }
+
+    .nav {
+    &__list {
         font-weight: 500;
         font-size: 40px;
         line-height: 0.85;
         letter-spacing: 0.02em;
-        
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    &__nav-item {
-        display: flex;
+    &__item {
         margin-bottom: 32px;
     }
 
@@ -31,27 +63,39 @@
         color: var(--main-text-color);
     }
 
-    &__link--accent {
-        color: var(--accent-color);
-    }
+    
+    
+}
+}
 
-    &__bottom {
+.communication {
     margin-top: auto;
-    }
 
-    &__contacts-item:first-child {
+    &__item:first-child {
+        margin-bottom: 32px;
         font-weight: 500;
         font-size: 34px;
-        line-height: 1.18;    
+        line-height: 1.18;
         letter-spacing: 0.02em;
-        
-
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    &__social-list {
-        display: flex;
-        gap:
+    &__item:last-child {
+        margin-bottom: 64px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;    
     }
+}
+
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;   
 }
 
