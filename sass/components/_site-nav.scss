@@ -24,7 +24,7 @@
     display: flex;
 
             @media screen and (max-width:767px) {
-                @include hidden;
+                display: none;
             }
 
     &__link,
@@ -76,7 +76,7 @@
 .contacts {
 
     @media screen and (max-width:767px) {
-            @include hidden;
+            display: none;
         }
     
     display: flex;
@@ -133,7 +133,7 @@
 
 .mob-menu__svg {
     @media screen and (min-width:768px) {
-            @include hidden;
+            display: none;
         }
     margin-left: auto;
     width: 40px;
