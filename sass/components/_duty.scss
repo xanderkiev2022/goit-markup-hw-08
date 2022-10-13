@@ -16,6 +16,10 @@
     
     &__list {
     display: flex;
+
+            @media screen and (max-width:1199px) {
+                flex-wrap: wrap;
+                }
     }
 
     &__item {

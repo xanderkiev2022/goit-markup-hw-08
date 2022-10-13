@@ -54,6 +54,9 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+            @media screen and (max-width: 767px) {
+                    max-width: 450px;                    
+                }
     }
 
     &__link {
@@ -73,11 +76,11 @@
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         max-width: 370px;
-        height: 404px;
+        // height: 404px;
             
             @media screen and (max-width: 767px) {
                 max-width: 450px;
-                height: 404px;
+                // height: 404px;
             }
     }
 
@@ -121,11 +124,13 @@
     }
         &__picture {
             width: 370px;
-            height: 294px;
+            // height: 294px;
 
                 @media screen and (max-width: 767px) {
-                    max-width: 354px;
-                    height: 294px;
+                    width: 450px;
+                    // object-fit: cover;
+                    // object-position: center center;
+                    // height: 294px;
                 }
         }
     &__pic-text {

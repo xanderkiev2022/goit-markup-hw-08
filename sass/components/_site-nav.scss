@@ -79,14 +79,35 @@
             display: none;
         }
     
-    display: flex;
-    margin-left: auto;
+    display: flex;    
+
+        @media screen and (max-width:1199px) {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            margin-left: 96px;
+            
+        }
+
+        @media screen and (min-width:1200px) {
+            margin-left: auto;
+        }
 
     &__link {
         display: flex;
         align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;    
+
+        // &:not(:last-child) {
+                @media screen and (max-width:1199px) {
+                        // padding-top: 0;
+                        // margin-bottom: 10px;
+                    gap: 10px;
+                    }
+        // }
+                @media screen and (min-width:1200px) {
+                        padding-top: 32px;
+                        padding-bottom: 32px;
+                }
+                    
     
         color: var(--submain-text-color);
         font-weight: 500;
@@ -126,6 +147,10 @@
 
 .contacts__item+.contacts__item {
     margin-left: 50px;
+
+            @media screen and (max-width:1199px) {
+                    margin-left: 0;
+    }
 }
 
 

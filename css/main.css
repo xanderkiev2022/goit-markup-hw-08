@@ -171,7 +171,6 @@ img {
 
 .contacts {
   display: flex;
-  margin-left: auto;
   /* Через Before */
   /* .email::before {
   display: inline-block;
@@ -190,11 +189,21 @@ img {
     display: none;
   }
 }
+@media screen and (max-width: 1199px) {
+  .contacts {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-left: 96px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    margin-left: auto;
+  }
+}
 .contacts__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--submain-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -202,6 +211,17 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 1199px) {
+  .contacts__link {
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
@@ -214,6 +234,11 @@ img {
 
 .contacts__item + .contacts__item {
   margin-left: 50px;
+}
+@media screen and (max-width: 1199px) {
+  .contacts__item + .contacts__item {
+    margin-left: 0;
+  }
 }
 
 /* Моб-меню */
@@ -355,6 +380,11 @@ img {
 .duty__list {
   display: flex;
 }
+@media screen and (max-width: 1199px) {
+  .duty__list {
+    flex-wrap: wrap;
+  }
+}
 .duty__item {
   position: relative;
 }
@@ -444,7 +474,6 @@ img {
 @media screen and (max-width: 767px) {
   .team__item {
     max-width: 450px;
-    height: 622px;
   }
 }
 .team__photo {
@@ -699,6 +728,11 @@ img {
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 767px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
 .subscribe__input:hover, .subscribe__input:focus {
   border-color: var(--accent-color);
 }
@@ -791,6 +825,11 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 767px) {
+  .portfolio__list {
+    max-width: 450px;
+  }
+}
 .portfolio__link {
   display: block;
   text-decoration: none;
@@ -805,12 +844,10 @@ img {
   margin: 15px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 370px;
-  height: 404px;
 }
 @media screen and (max-width: 767px) {
   .portfolio__item {
     max-width: 450px;
-    height: 404px;
   }
 }
 .portfolio__link:hover, .portfolio__link:focus {
@@ -841,12 +878,10 @@ img {
 }
 .portfolio__picture {
   width: 370px;
-  height: 294px;
 }
 @media screen and (max-width: 767px) {
   .portfolio__picture {
-    max-width: 354px;
-    height: 294px;
+    width: 450px;
   }
 }
 .portfolio__pic-text {
