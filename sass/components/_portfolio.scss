@@ -55,8 +55,10 @@
         display: flex;
         flex-wrap: wrap;
             @media screen and (max-width: 767px) {
-                    max-width: 450px;                    
+                max-width: 450px;                    
                 }
+            @media screen and (min-width:768px) and (max-width:1199px) {
+            }
     }
 
     &__link {
@@ -75,13 +77,14 @@
         margin: 15px;
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        max-width: 370px;
-        // height: 404px;
-            
+        max-width: 370px;            
             @media screen and (max-width: 767px) {
                 max-width: 450px;
-                // height: 404px;
             }
+            @media screen and (min-width:768px) and (max-width:1199px) {
+                max-width: 354px;
+            }
+            
     }
 
     &__link:hover,
@@ -91,8 +94,11 @@
 
     &__frame {
         border: 1px solid #EEEEEE;
-        // margin-top: -5px;
-        padding: 20px 24px;
+        padding: 20px 24px;  
+
+            &--modifier {
+                padding-bottom: 56px;
+            }
     }
 
     &__name {
@@ -116,11 +122,6 @@
         position: relative;
         overflow: hidden;
         height: 294px;
-        
-        // @media screen and (max-width: 767px) {
-        //         max-width: 450px;
-        //         height: 404px;
-        //     }
     }
         &__picture {
             width: 370px;
@@ -128,9 +129,6 @@
 
                 @media screen and (max-width: 767px) {
                     width: 450px;
-                    // object-fit: cover;
-                    // object-position: center center;
-                    // height: 294px;
                 }
         }
     &__pic-text {
@@ -164,6 +162,7 @@
         transform: translateY(0);
     }
 }
+
 
                                 /* Ділимо на 3 секції через nth child */
         

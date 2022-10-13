@@ -911,12 +911,20 @@ img {
     max-width: 450px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__item {
+    max-width: 354px;
+  }
+}
 .portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .portfolio__frame {
   border: 1px solid #EEEEEE;
   padding: 20px 24px;
+}
+.portfolio__frame--modifier {
+  padding-bottom: 56px;
 }
 .portfolio__name {
   font-weight: 700;
