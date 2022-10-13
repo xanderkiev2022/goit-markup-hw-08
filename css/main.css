@@ -102,6 +102,13 @@ img {
     padding-bottom: 16px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    width: 768px;
+    height: 80px;
+    margin: 0 auto;
+  }
+}
 .header .container {
   align-items: center;
   display: flex;
@@ -274,6 +281,14 @@ img {
     max-height: 600px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    width: 768px;
+    height: 400px;
+  }
+}
 .hero__title {
   font-size: 26px;
   line-height: 1.62;
@@ -338,11 +353,22 @@ img {
 }
 .advantages__list {
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 @media screen and (max-width: 767px) {
   .advantages__list {
     flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages__list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages__item {
+    width: 354px;
   }
 }
 .advantages__svg {
@@ -354,8 +380,13 @@ img {
   background-color: var(--team-buttons-background-color);
   border-radius: 4px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages__svg {
+    width: 100%;
+  }
+}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .duty {
     position: absolute;
     width: 1px;

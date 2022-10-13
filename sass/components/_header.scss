@@ -6,6 +6,13 @@
             padding-bottom: 16px;
             }
 
+        @media screen and (min-width:768px) and (max-width:1199px) {
+
+            width: 768px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
     .container {
             align-items: center;
             display: flex;
