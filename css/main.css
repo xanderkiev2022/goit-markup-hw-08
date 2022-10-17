@@ -268,7 +268,7 @@ img {
   background-color: var(--hero-footer-background-color);
   text-align: center;
   margin: auto;
-  background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img.jpg");
+  background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img-base@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -287,6 +287,31 @@ img {
     padding-bottom: 118px;
     max-width: 768px;
     height: 400px;
+  }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img-base@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img-tablet@1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img-dt@1x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--overlay-color), var(--overlay-color)), url("../images/hero-img-dt@2x.jpg");
   }
 }
 .hero__title {
@@ -323,7 +348,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__btn:hover, .hero__btn:focus {
-  background: #188CE8;
+  background: #188ce8;
 }
 
 @media screen and (min-width: 1200px) {
