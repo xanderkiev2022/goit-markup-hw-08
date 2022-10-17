@@ -190,16 +190,16 @@ img {
   display: flex;
   /* Через Before */
   /* .email::before {
-  display: inline-block;
-  content: "";
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-  background-image: url("../images/SVG/contacts-envelope.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  outline: 1px solid black;
-  } */
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    background-image: url("../images/SVG/contacts-envelope.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: 1px solid black;
+    } */
 }
 @media screen and (max-width: 767px) {
   .contacts {
@@ -285,7 +285,7 @@ img {
   .hero {
     padding-top: 118px;
     padding-bottom: 118px;
-    width: 768px;
+    max-width: 768px;
     height: 400px;
   }
 }
@@ -783,7 +783,7 @@ img {
 }
 @media screen and (max-width: 1199px) {
   .subscribe__input {
-    width: 450px;
+    max-width: 450px;
   }
 }
 .subscribe__input:hover, .subscribe__input:focus {
@@ -825,7 +825,7 @@ img {
   }
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
-  background: #188CE8;
+  background: #188ce8;
 }
 .subscribe__svg {
   margin-left: 10px;
@@ -906,33 +906,50 @@ img {
   max-width: inherit;
   height: inherit;
 }
-.portfolio__list { /* Ділимо на 3 секції через -15px */
-  margin: -15px;
+.portfolio__list {
+  /* Ділимо на 3 секції через -15px */
 }
-.portfolio__item { /* в лішку, а не в хувер, щоб в 2 сторони був box-shadow */
-  margin: 15px;
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    margin: -15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.portfolio__item {
+  /* в лішку, а не в хувер, щоб в 2 сторони був box-shadow */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  max-width: 370px;
 }
 @media screen and (max-width: 767px) {
   .portfolio__item {
-    max-width: 450px;
+    width: 100%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .portfolio__item {
+    margin: 15px;
     max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    max-width: 370px;
   }
 }
 .portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .portfolio__frame {
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   padding: 20px 24px;
 }
-.portfolio__frame--modifier {
-  padding-bottom: 56px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__frame--modifier {
+    padding-bottom: 56px;
+  }
 }
 .portfolio__name {
   font-weight: 700;
@@ -948,17 +965,19 @@ img {
   letter-spacing: 0.03em;
   color: var(--submain-text-color);
 }
-.portfolio__thumb { /* Ефект виїзду карточки в Портфоліо */
+.portfolio__thumb {
+  /* Ефект виїзду карточки в Портфоліо */
   position: relative;
   overflow: hidden;
-  height: 294px;
 }
-.portfolio__picture {
-  width: 370px;
+@media screen and (min-width: 768px) {
+  .portfolio__thumb {
+    height: 294px;
+  }
 }
 @media screen and (max-width: 767px) {
   .portfolio__picture {
-    width: 450px;
+    width: 100%;
   }
 }
 .portfolio__pic-text {
@@ -1123,7 +1142,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--backdrop);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), hidden 250ms cubic-bezier(0.4, 0, 0.2, 1); /* фон+вікно виринає м"яко */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /* фон+вікно виринає м"яко */
 }
 .backdrop.is-hidden {
   opacity: 0;
