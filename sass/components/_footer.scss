@@ -90,7 +90,6 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        // max-width: 450px;
         margin-top: 60px;
         justify-content: center;
     }
@@ -109,10 +108,6 @@
 
         margin-top: 20px;
 
-        // @media screen and (max-width: 767px) {
-        //     max-width: 450px;
-        // }
-
         @media screen and (max-width: 1199px) {
             flex-direction: column;
             align-items: center;
@@ -123,16 +118,18 @@
         box-sizing: border-box;
         background-color: transparent;
         width: 100%;
-        max-width: 450px;
         height: 50px;
 
-        // padding: 16px 295px 15px 15px;
         padding-left: 16px;
         padding-top: 15px;
         padding-bottom: 15px;
 
+        @media screen and (min-width: 768px) {
+            width: 450px;
+        }
+
         @media screen and (min-width: 1200px) {
-            max-width: 358px;
+            width: 358px;
         }
 
         border: 1px solid rgba(255, 255, 255, 0.3);
