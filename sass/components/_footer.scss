@@ -124,9 +124,13 @@
         padding-top: 15px;
         padding-bottom: 15px;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 480px) {
             width: 450px;
         }
+
+        // @media screen and (min-width: 768px) {
+        //     width: 450px;
+        // }
 
         @media screen and (min-width: 1200px) {
             width: 358px;
