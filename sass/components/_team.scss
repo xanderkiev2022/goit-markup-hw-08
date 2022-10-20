@@ -1,4 +1,3 @@
-
 .team {
     color: var(--main-text-color);
     background-color: var(--team-buttons-background-color);
@@ -9,11 +8,11 @@
         line-height: 1.17;
         padding-bottom: 30px;
 
-            @media screen and (min-width: 768px) {
-                font-size: 36px;
-                padding-bottom: 50px;
-            }
-        
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+            padding-bottom: 50px;
+        }
+
         text-align: center;
         font-weight: 700;
         color: var(--main-text-color);
@@ -22,49 +21,49 @@
         display: flex;
         justify-content: center;
         gap: 30px;
-            @media screen and (max-width: 767px) {
-                flex-direction: column;                
-            }
-            @media screen and (min-width:768px) and (max-width:1199px) {
-                flex-wrap: wrap;
-            }
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex-wrap: wrap;
+        }
     }
     &__name {
         font-weight: 500;
     }
     &__position {
         margin-top: 10px;
-        margin-bottom: 16px;        
+        margin-bottom: 16px;
 
         @media screen and (min-width: 768px) {
             margin-bottom: 20px;
         }
-    
-        font-weight: 500;
+
+        // font-weight: 400;
         font-size: 16px;
         line-height: 1.19;
         letter-spacing: 0.03em;
-        color: var(--submain-text-color); 
+        color: var(--submain-text-color);
     }
-    &__item {        
+    &__item {
         background-color: var(--white-color);
         border-radius: 0px 0px 4px 4px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            
-            @media screen and (max-width: 767px) {
-                max-width: 450px;
-            }  
-            @media screen and (min-width:768px) and (max-width:1199px) {
-                max-width: 354px;
-            }
+
+        @media screen and (max-width: 767px) {
+            max-width: 450px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            max-width: 354px;
+        }
         max-width: 270px;
     }
-    
+
     &__photo {
         @media screen and (max-width: 767px) {
             margin-left: auto;
             margin-right: auto;
-            }
+        }
         width: 100%;
     }
 

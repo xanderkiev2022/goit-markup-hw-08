@@ -9,7 +9,7 @@
     height: 100%;
     background-color: var(--backdrop);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);    /* фон+вікно виринає м"яко */
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /* фон+вікно виринає м"яко */
 
     &.is-hidden {
         opacity: 0;
@@ -25,29 +25,29 @@
 /* Модальне вікно */
 
 .modal {
-    // position: relative; 
+    // position: relative;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     width: 528px;
     height: 581px;
 
-        @media screen and (max-width:1199px) {
-            width: 450px;
-            height: 609px;
-            }
+    @media screen and (max-width: 1199px) {
+        width: 450px;
+        height: 609px;
+    }
 
     padding: 40px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    background-color: var(--white-color);       
+    background-color: var(--white-color);
 
     h2 {
-
-        @media screen and (max-width:1199px) {
+        @media screen and (max-width: 1199px) {
             width: 370px;
             margin: 0 auto;
         }
@@ -59,19 +59,19 @@
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--main-text-color);
-    
+
         padding-bottom: 30px;
-        }
+    }
 
     &__list:not(:last-child) {
-            display: block;
-            margin-bottom: 28px;
-        }
+        display: block;
+        margin-bottom: 28px;
+    }
 
     &__field {
         position: relative;
         display: flex;
-        align-items: center;    
+        align-items: center;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -82,10 +82,10 @@
 
     &__label {
         position: absolute;
-    
+
         top: -20px;
         left: 0;
-    
+
         font-family: 'Roboto';
         font-size: 12px;
         line-height: 1.16;
@@ -105,20 +105,20 @@
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         padding: 11px 12px 11px 42px;
-        outline: transparent;                   /* обводка field прозора*/
-        cursor: pointer;            
+        outline: transparent; /* обводка field прозора*/
+        cursor: pointer;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &__svg {
         position: absolute;
-    
+
         top: 50%;
         left: 0;
         transform: translateY(-50%);
         margin-left: 11px;
         align-items: center;
-    
+
         width: 18px;
         height: 18px;
     }
@@ -130,7 +130,7 @@
         padding: 11px 16px;
         margin-bottom: 20px;
         resize: none;
-    
+
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -149,35 +149,35 @@
     &__field--confirmation {
         position: relative;
 
-            & .modal__label {
-                    top: -5px;
-                    margin-left: 35px;
-            
-                    font-family: 'Roboto';
-                    font-size: 14px;
-                    line-height: 1.71;
-                    letter-spacing: 0.03em;
+        & .modal__label {
+            top: -5px;
+            margin-left: 35px;
 
-                        @media screen and (max-width:1199px) {
-                            top: 0;
-                            margin-left: 25px;
+            font-family: 'Roboto';
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
 
-                            font-weight: 400;
-                            font-size: 12px;
-                            line-height: 1.17;
-                        }
-            
-                    color: var(--submain-text-color);
-                }
-            
-            & .modal__agreement {
-                color: var(--accent-color);
-                letter-spacing: 0.03em;
-                text-decoration-skip-ink: none;
+            @media screen and (max-width: 1199px) {
+                top: 0;
+                margin-left: 25px;
+
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.17;
+            }
+
+            color: var(--submain-text-color);
+        }
+
+        & .modal__agreement {
+            color: var(--accent-color);
+            letter-spacing: 0.03em;
+            text-decoration-skip-ink: none;
         }
     }
 
-    &__checkbox:checked+.modal__check {
+    &__checkbox:checked + .modal__check {
         background-color: var(--accent-color);
         border-color: transparent;
     }
@@ -186,32 +186,32 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         width: 16px;
-        height: 15px;
+        height: 15px; //можна було через ::before зробити + :checked
         border: 2px solid var(--main-text-color);
         fill: var(--white-color);
         // fill: var(--main-text-color);
         margin-left: 10px;
 
-            @media screen and (max-width:1199px) {
-                margin-left: 0;
-            }
+        @media screen and (max-width: 1199px) {
+            margin-left: 0;
+        }
 
         border-radius: 2px;
         background-origin: border-box;
-    
+
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
             border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
-            
-            &--svg {
+
+        &--svg {
             // margin-left: 11px;
-                width: 100%;
-                height: 100%;
-            }
-    }    
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .submit {
@@ -219,33 +219,33 @@
         display: flex;
         margin-left: auto;
         margin-right: auto;
-    
+
         background-color: var(--accent-color);
         min-width: 200px;
         height: 50px;
         margin-top: 30px;
-    
+
         padding: 10px 52px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         border: none;
-    
+
         font-family: 'Roboto';
         font-weight: 700;
         font-size: 16px;
         line-height: 1.86;
         color: var(--white-color);
         letter-spacing: 0.06em;
-    
+
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
+
         &--close {
             position: absolute;
-        
+
             display: flex;
             justify-content: center;
             align-items: center;
-        
+
             top: 8px;
             right: 8px;
             width: 30px;
@@ -253,22 +253,20 @@
             background-color: var(--white-color);
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-        
-                &:hover .close-svg,
-                &:focus .close-svg {
-                    fill: var(--accent-color);
+
+            &:hover .close-svg,
+            &:focus .close-svg {
+                fill: var(--accent-color);
             }
-        }          
+        }
     }
 
     &__btn:hover,
     &__btn:focus {
-        background: #188CE8;
+        background: #188ce8;
     }
 }
 
 .close-svg {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
